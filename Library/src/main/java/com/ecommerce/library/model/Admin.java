@@ -1,9 +1,11 @@
 package com.ecommerce.library.model;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 import java.util.Collection;
 @Data
@@ -18,11 +20,11 @@ public class Admin {
     private Long id;
     private String firstName;
     private String lastName;
-    private String userName;
+    private String username;
     private String password;
 
     @Lob
-    @Column(columnDefinition = "MEDIUMLOB")
+    @Column(columnDefinition = "MEDIUMBLOB")
     private String image;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)

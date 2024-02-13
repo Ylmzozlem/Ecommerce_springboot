@@ -1,0 +1,31 @@
+server:
+  port: 8019
+  servlet:
+    context-path: /admin
+
+spring:
+  thymeleaf:
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+
+# Datasource
+spring.datasource.url: jdbc:postgresql://localhost:5432/ecommerce_spring
+spring.datasource.username: postgres
+spring.datasource.password: Ozlem.61
+spring.datasource.driver-class-name: org.postgresql.Driver
+
+# JPA
+spring.jpa.generate-ddl: true
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto: update
+
+# Multipart file
+spring.servlet.multipart.enabled: true
+spring.servlet.multipart.file-size-threshold: 2KB
+spring.servlet.multipart.max-file-size: 100MB
+spring.servlet.multipart.max-request-size: 100
